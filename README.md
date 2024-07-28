@@ -28,7 +28,7 @@ yarn dev
 
 | Name             | Required | Default | Description                                                 |
 | ---------------- | -------- | ------- | ----------------------------------------------------------- |
-| GRAPHQL_ENDPOINT | Yes      | -       | WordPress WPGraphQL endpoint (ex: https://host.com/graphl/) |
+| GRAPHQL_ENDPOINT | Yes      | -       | WordPress WPGraphQL endpoint (ex: https://host.com/graphql/) |
 
 To get the particular post from link https://wordpressdomain.com/path
 Replace it by https://newverceldomain.vercel.app/path
