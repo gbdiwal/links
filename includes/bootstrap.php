@@ -1,0 +1,1 @@
+<?php $config=require __DIR__.'/../config/config.php';date_default_timezone_set($config['app']['timezone']);ini_set('session.use_strict_mode','1');ini_set('session.cookie_httponly','1');ini_set('session.cookie_samesite','Lax');session_start();require_once __DIR__.'/db.php';require_once __DIR__.'/security.php';require_once __DIR__.'/helpers.php';$db=db($config['db']);

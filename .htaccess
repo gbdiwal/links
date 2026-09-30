@@ -1,0 +1,15 @@
+Options -Indexes
+RewriteEngine On
+<FilesMatch "^(\.env|config\.php|schema\.sql)$">Require all denied</FilesMatch>
+RewriteRule ^(config|database|includes)/ - [F,L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^login/?$ login.php [L,QSA]
+RewriteRule ^logout/?$ logout.php [L,QSA]
+RewriteRule ^admin/?$ admin/index.php [L,QSA]
+RewriteRule ^admin/(.+)$ admin/index.php?page=$1 [L,QSA]
+RewriteRule ^dashboard/?$ user/index.php [L,QSA]
+RewriteRule ^dashboard/(.+)$ user/index.php?page=$1 [L,QSA]
+RewriteRule ^s/([A-Za-z0-9_-]+)/?$ redirect.php?code=$1 [L,QSA]
+RewriteRule ^(.+)$ index.php [L,QSA]
