@@ -1,23 +1,17 @@
-# LinkForge — Professional URL Shortener Platform
+# SHORTLINK
 
-Hostinger-ready PHP + MySQL URL shortener with clean routes, admin/user roles, single and bulk workflows, OG Preview, Domain Control and Abuse Protection.
+Professional short-link management UI using the locked navy, indigo, purple and gold design system.
 
-## Routes
-- `/`
-- `/login`
-- `/admin`
-- `/dashboard`
-- `/s/{code}`
+## Included
+- Public ShortLink landing page
+- Login-only access flow (no registration UI)
+- Admin dashboard and management sections
+- Single/Bulk link workflow and OG preview controls
+- Domain Control / Allowed Websites
+- Human-focused analytics / Traffic Shield presentation
+- Responsive professional UI
 
-## Security
-CSRF, prepared PDO statements, password_hash/password_verify, secure sessions, role protection, output escaping, and upload validation.
+## Run
+npm install && npm run dev
 
-## Hostinger
-1. Import `database/schema.sql`.
-2. Copy `config/config.php.example` to `config/config.php`.
-3. Enter Hostinger MySQL credentials.
-4. Upload to `public_html`.
-5. Set the real `base_url`.
-6. Make `uploads/` writable.
-
-Do not commit production credentials.
+This repository currently contains the Next.js interface layer. Production PHP/MySQL authentication, CSRF, uploads, role enforcement and analytics should be connected for Hostinger deployment.
